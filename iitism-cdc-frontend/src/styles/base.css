@@ -1,0 +1,122 @@
+:root {
+  font-family: 'Segoe UI', 'Aptos', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #334155;
+  background:
+    radial-gradient(circle at top left, rgba(210, 166, 80, 0.16), transparent 24%),
+    linear-gradient(180deg, #f6f8fb 0%, #eef3f8 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --heading: #0d1b40;
+  --text: #334155;
+  --muted: #64748b;
+  --muted-strong: #475569;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #ffffff;
+  --surface-muted: #f8fafc;
+  --border: rgba(13, 27, 64, 0.1);
+  --accent: #bc8a2f;
+  --shadow-soft: 0 24px 60px rgba(13, 27, 64, 0.08);
+  --shadow-strong: 0 30px 70px rgba(13, 27, 64, 0.12);
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  appearance: none;
+}
+
+#root {
+  width: min(1440px, calc(100% - 32px));
+  margin: 0 auto;
+  padding-bottom: 36px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--heading);
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-strong);
+  color: var(--heading);
+  padding: 14px 16px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(188, 138, 47, 0.8);
+  box-shadow: 0 0 0 4px rgba(188, 138, 47, 0.14);
+}
+
+@media (max-width: 720px) {
+  #root {
+    width: min(100%, calc(100% - 20px));
+  }
+}
